@@ -1,0 +1,3 @@
+fprintf(stderr,"This will be printed on console!!!!!!!!");
+
+fprintf(stdout, "This will be printed in file");

@@ -1,0 +1,45 @@
+Q1 What is the file size?
+0 is the size of file.
+
+Q2 What is the modification time?
+May 24 10:40    is the modification time.
+
+Q3 What open file descriptors can you see from the output
+I can see these file descripter:
+
+lrwx------ 1 hamza hamza 64 May 24 10:42 0 -> /dev/pts/1
+lrwx------ 1 hamza hamza 64 May 24 10:42 1 -> /dev/pts/1
+lrwx------ 1 hamza hamza 64 May 24 10:42 2 -> /dev/pts/1
+lrwx------ 1 hamza hamza 64 May 24 10:43 255 -> /dev/pts/1
+
+
+
+Q4 What do the arrow operator (->) represent?
+
+
+Q What just happened? We had two terminal windows open. Each terminal window?
+Ans:
+It means we can write form one process to another process by file descripters.
+
+
+Q1 Find out the total memory of your machine?
+MemTotal:        7086452 kB
+
+
+Q2 How much of it is free?
+MemFree:         2554544 kB
+
+Q3 How much is your swap space?
+SwapTotal:       2097148 kB
+
+Q4 How much of that swap space is free from meminfo?
+SwapFree:        2097148 kB
+
+
+
+
+
+
+
+
+

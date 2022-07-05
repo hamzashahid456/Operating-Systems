@@ -1,0 +1,59 @@
+#include<stdio.h>   //using pipes
+#include<stdlib.h>
+#include<sys/wait.h>
+#include<fcntl.h>
+#include<sys/stat.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<string.h>
+
+int main(int argc, char* argv[]){
+    //for input file
+    char *path = argv[1];
+
+    int pid, pfd[2];
+
+    pipe(pfd);  // create pipe
+    pid = fork();   // creating processes
+
+    int fd = open(path, O_RDONLY);
+
+    //for output file
+    char *filename = argv[2];
+    int fd2 = open(filename, O_WRONLY | O_APPEND | O_CREAT, 0666);
+
+    if(argc == -1){
+        printf("File doesn't exist");
+    }
+    
+    int v = 1;  //for using it in while loop
+
+    char buffer[10];    //buffer and it's size
+    char childBuff[10];
+
+    while(v > 0){
+ 
+        if(pid == 0){
+            close fd[0];    // closing the reading process of pipe
+
+            //for reading
+            v = read(fd, buffer, sizeof(buffer)-1 );
+            write(fd[1], buffer, v);
+        }
+        
+        else{
+            wait(NULL);
+            closefd[1]; //closing the writing process of pipe for parent
+            read(fd[0], );
+
+
+
+            size_t length = strlen(buffer);
+            write(fd2, buffer, length);
+        }
+    }
+    //for closing both opened files
+    close(fd);
+    close(fd2);
+    return 0;
+}

@@ -1,0 +1,22 @@
+Task 1:
+cd /home/hamza/Grades/B/Physics
+
+cd ../B/Physics
+
+cd .././B/Physics
+
+
+
+
+Task3:
+ls file[2-4]
+
+rm f*.[cs]
+
+ls *file*
+
+ls f*c
+
+ls *a*o
+
+ls ?????
